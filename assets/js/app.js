@@ -22,3 +22,10 @@ function updateToggleIcon() {
     toggle.classList.add("fa-moon");
   }
 }
+
+const menuBtn = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});

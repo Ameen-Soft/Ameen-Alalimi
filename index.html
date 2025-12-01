@@ -13,76 +13,80 @@
 <body class="dark">
   <header class="text-xl fixed top-0 left-0 w-full z-50">
     <nav
-      class="navigation px-40 flex justify-between items-center h-12 bg-theme-card transition-colors duration-500 shadow-md">
-      <!-- شعار + أيقونة الوضع الليلي -->
-      <div class="logo flex items-center space-x-16 text-theme-text ">
-        <!-- الشعار -->
+      class="navigation px-6 md:px-16 lg:px-40 flex justify-between items-center h-14 bg-theme-card transition-colors duration-500 shadow-md">
+      <!-- الشعار + الوضع الليلي -->
+      <div class="logo flex items-center space-x-16 text-theme-text">
         <i id="darkToggle" class="fa fa-sun cursor-pointer hover:translate-y-1 duration-300 text-theme-accent"></i>
         <!-- لوجو -->
         <a href="#home" class="bg-gradient-primary bg-clip-text text-transparent font-bold text-2xl">&lt;Ameen/&gt;</a>
       </div>
 
-      <!-- قائمة التنقل -->
-      <div class="menu">
+      <!-- زر القائمة للجوال -->
+      <button id="menuToggle" class="md:hidden text-theme-text text-2xl">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <div class="menu hidden md:block">
         <ul class="flex space-x-6 text-theme-text text-base">
           <li><a href="#services" class="hover:text-theme-accent duration-300">الخدمات</a></li>
           <li><a href="#skills" class="hover:text-theme-accent duration-300">المهارات</a></li>
           <li><a href="#projects" class="hover:text-theme-accent duration-300">اعمال</a></li>
-          <li><a href="contact.html"
+          <li><a href="#contact"
               class="px-5 py-1.5 text-center bg-theme-card text-theme-accent border border-theme-accent rounded-md hover:bg-theme-accent hover:text-theme-accent-hover transition-all duration-300">تواصل</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- <div class="hidden text-theme-text text-base">
-      <a href="services.html" class="hover:text-theme-accent duration-300">الخدمات</a>
-      <a href="skills.html" class="hover:text-theme-accent duration-300">المهارات</a>
-      <a href="projects.html" class="hover:text-theme-accent duration-300">مشاريعي</a>
-      <a href="contact.html"
-        class="px-5 py-1.5 text-center bg-theme-card text-theme-accent border border-theme-accent rounded-md hover:bg-theme-accent hover:text-theme-accent-hover transition-all duration-300">تواصل</a>
-    </div> -->
+    <!-- قائمة الجوال المنسدلة -->
+    <div id="mobileMenu"
+      class="md:hidden hidden flex flex-col bg-theme-card px-6 py-4 shadow-md border-t border-theme-border transition-all duration-300 space-y-3">
+      <a href="#services" class="block py-2 text-theme-text hover:text-theme-accent duration-300">الخدمات</a>
+      <a href="#skills" class="block py-2 text-theme-text hover:text-theme-accent duration-300">المهارات</a>
+      <a href="#projects" class="block py-2 text-theme-text hover:text-theme-accent duration-300">اعمال</a>
+      <a href="#contact"
+        class="block px-5 py-2 text-center bg-theme-card text-theme-accent border border-theme-accent rounded-md hover:bg-theme-accent hover:text-theme-accent-hover duration-300">تواصل</a>
+    </div>
   </header>
 
-  <section id="home" class="min-h-screen flex items-center justify-center pt-10 section-container p-20">
-    <div class="grid md:grid-cols-2 gap-12 items-center space-x-30">
-      <div class="space-y-6 fade-up delay-100">
-        <p class="bg-gradient-primary w-22 bg-clip-text text-transparent">مرحباً، اسمي</p>
-        <h1 class="text-5xl md:text-7xl font-black leading-tight textt-theme-text">
-          امين <span class="bg-gradient-primary bg-clip-text text-transparent">العليمي</span>
-        </h1>
-        <h2 class="text-3xl md:text-4xl font-bold text-theme-text">مطور مواقع</h2>
-        <p class="text-lg max-w-xl leading-relaxed">اعمل على تطوير واجهات الويب وحلول تقنية ذات جودة عالية</p>
-        <div class="flex gap-4 pt-4">
-          <a href="#projects"
-            class="px-8 py-4 rounded-lg bg-theme-card text-theme-accent font-bold hover:-translate-y-1 transition-all">
-            شاهد أعمالي
-          </a>
+  <section id="home" class="min-h-screen flex items-center justify-center pt-10 section-container px-6 md:px-20">
+    <div
+      class="grid md:grid-cols-2 gap-12 items-center md:space-x-30 flex flex-col-reverse md:flex-row text-center md:text-left">
+      <div class="space-y-6 fade-up delay-100 flex flex-col items-center md:items-start text-center md:text-left">
+        <p class="bg-gradient-primary w-fit bg-clip-text text-transparent">مرحباً، اسمي</p>
+        <h1 class="text-4xl md:text-7xl font-black leading-tight text-theme-text">امين <span
+            class="bg-gradient-primary bg-clip-text text-transparent">العليمي</span></h1>
+        <h2 class="text-2xl md:text-4xl font-bold text-theme-text">مطور مواقع</h2>
+        <p class="text-base md:text-lg max-w-xl leading-relaxed">اعمل على تطوير واجهات الويب وحلول تقنية ذات جودة عالية
+        </p>
+        <div class="flex gap-4 pt-4"><a href="#projects"
+            class="px-8 py-4 rounded-lg bg-theme-card text-theme-accent font-bold hover:-translate-y-1 transition-all">شاهد
+            أعمالي</a>
           <a href="#contact"
-            class="px-8 py-4 rounded-lg font-bold border border-slate-700 hover:-translate-y-1 transition-all">
-            تواصل معي
-          </a>
+            class="px-8 py-4 rounded-lg font-bold border border-slate-700 hover:-translate-y-1 transition-all">تواصل
+            معي</a>
         </div>
       </div>
-      <div class="hidden md:flex justify-center fade-up delay-300 relative">
-        <div class="absolute -inset-4 bg-gradient-primary w-120 opacity-20 blur-3xl rounded-full z-0">
-        </div>
-        <!-- صورة الملف الشخصي -->
+
+      <!-- الصورة -->
+      <div class="flex md:flex hidden md:flex justify-center fade-up delay-300 relative">
+        <div class="absolute -inset-4 bg-gradient-primary w-120 opacity-20 blur-3xl rounded-full z-0"></div>
+
         <img src="assets/images/profile.png" alt="صورة الملف الشخصي"
           class="w-80 h-80 object-cover rounded-2xl border-4 border-slate-800 shadow-2xl rotate-3 grayscale-100 hover:grayscale-50 hover:rotate-0 transition-all duration-500 z-10 relative">
       </div>
     </div>
   </section>
 
-  <section id="services" class="py-10 px-40 fade-up">
+  <section id="services" class="py-10 px-6 md:px-20 lg:px-40 fade-up">
     <h2
       class="text-3xl font-bold text-theme-text mb-16 flex items-center after:content-[''] after:block after:w-32 after:h-[1px] after:bg-gray-700 after:mr-6">
       <span class="text-theme-accent text-xl ml-2 font-mono">01.</span> خدماتي
     </h2>
 
-    <!-- تطوير واجهات -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- تطوير واجهات -->
       <div
         class="bg-theme-card p-8 rounded-lg border border-theme-card hover:border-theme-accent/50 hover:-translate-y-2 transition-all duration-300 group">
         <div class="text-theme-accent mb-6">
@@ -116,7 +120,7 @@
         </div>
       </div>
 
-      <!-- صيناة -->
+      <!-- صيانة -->
 
       <div
         class="bg-theme-card p-8 rounded-lg border border-theme-card hover:border-theme-accent/50 hover:-translate-y-2 transition-all duration-300 group">
@@ -136,13 +140,13 @@
     </div>
   </section>
 
-  <section id="skills" class="py-20 px-40 fade-up">
+  <section id="skills" class="py-20 px-6 md:px-20 lg:px-40 fade-up">
     <h2
       class="text-3xl font-bold text-theme-text mb-16 flex items-center after:content-[''] after:block after:w-32 after:h-[1px] after:bg-gray-700 after:mr-6">
       <span class="text-theme-accent text-xl ml-2">02.</span> مهاراتي التقنية
     </h2>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
 
       <!-- JavaScript -->
       <div
@@ -192,6 +196,7 @@
         <h4 class="font-bold text-theme-text">Git</h4>
       </div>
 
+      <!-- Flutter -->
       <div
         class="p-6 rounded-xl bg-theme-card border border-slate-800 hover:border-theme-accent/50 hover:-translate-y-1 transition-all group">
         <i
@@ -204,13 +209,13 @@
     </div>
   </section>
 
-  <section id="projects" class="py-20 px-40 fade-up">
+  <section id="projects" class="py-20 px-6 md:px-20 lg:px-40 fade-up">
     <h2
       class="text-3xl font-bold text-theme-text mb-12 flex items-center after:content-[''] after:block after:w-32 after:h-[1px] after:bg-gray-700 after:mr-6">
       <span class="text-theme-accent text-xl ml-2 font-mono">03.</span> أعمال مميزة
     </h2>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- مشروع 1 -->
       <div
@@ -306,11 +311,104 @@
     <!-- زر المزيد -->
     <div class="text-center mt-12">
       <a href="https://github.com/Ameen-soft" target="_blank"
-        class="inline-flex items-center gap-2 hover:text-theme-accent transition transition px-6 py-3 rounded-lg border border-slate-700 hover:border-[#443dc8] transition-all font-mono">
+        class="inline-flex items-center gap-2 hover:text-theme-accent px-6 py-3 rounded-lg border border-slate-700 hover:border-[#443dc8] font-mono transition-all">
         مشاهدة المزيد على GitHub <i class="fa-brands fa-github"></i>
       </a>
     </div>
   </section>
+
+  <section id="contact" class="py-20 px-6 md:px-20 lg:px-40 fade-up">
+    <h2
+      class="text-3xl font-bold text-theme-text mb-12 flex items-center after:content-[''] after:block after:w-32 after:h-[1px] after:bg-gray-700 after:mr-6">
+      <span class="text-theme-accent text-xl ml-2 font-mono">04.</span> تواصل معي
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- نموذج التواصل -->
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-theme-text font-bold mb-2">الاسم</label>
+          <input type="text" id="name" name="name"
+            class="w-full p-3 rounded-lg border border-slate-700 bg-theme-card text-theme-text focus:outline-none focus:border-theme-accent transition-all">
+        </div>
+
+        <div>
+          <label for="email" class="block text-theme-text font-bold mb-2">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email"
+            class="w-full p-3 rounded-lg border border-slate-700 bg-theme-card text-theme-text focus:outline-none focus:border-theme-accent transition-all">
+        </div>
+
+        <div>
+          <label for="message" class="block text-theme-text font-bold mb-2">الرسالة</label>
+          <textarea id="message" name="message" rows="6"
+            class="w-full p-3 rounded-lg border border-slate-700 bg-theme-card text-theme-text focus:outline-none focus:border-theme-accent transition-all"></textarea>
+        </div>
+
+        <button type="submit"
+          class="px-8 py-4 rounded-lg bg-theme-accent text-theme-card font-bold hover:-translate-y-1 transition-all">
+          أرسل الرسالة
+        </button>
+      </form>
+
+      <!-- معلومات الاتصال -->
+      <div class="space-y-6 text-theme-text">
+        <p class="text-lg">يمكنك التواصل معي عبر الوسائل التالية:</p>
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-phone text-theme-accent text-xl"></i>
+          <span>+967 777235077</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-envelope text-theme-accent text-xl"></i>
+          <span>ameenalalimi.dev@gmail.com</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <i class="fa-solid fa-location-dot text-theme-accent text-xl"></i>
+          <span>شارع صنعاء، تعز، اليمن</span>
+        </div>
+
+        <!-- روابط تواصل اجتماعي (اختياري) -->
+        <div class="flex gap-6 mt-6">
+          <a href="https://t.me/AmeenDev" target="_blank"
+            class="text-theme-accent text-2xl hover:text-primaryAccent transition">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://wa.me/967777235077" target="_blank"
+            class="text-theme-accent text-2xl hover:text-green-500 transition">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="bg-theme-card text-theme-text py-10 px-6 md:px-20 lg:px-40 fade-up">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+      <!-- حقوق النشر -->
+      <p class="text-sm md:text-base">&copy; 2025 امين العليمي. جميع الحقوق محفوظة.</p>
+
+      <!-- روابط تواصل اجتماعي -->
+      <div class="flex gap-6 text-2xl">
+        <a href="https://t.me/AmeenDev" target="_blank" class="hover:text-primaryAccent transition">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="https://wa.me/967777235077" target="_blank" class="hover:text-green-500 transition">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://github.com/Ameen-soft" target="_blank" class="hover:text-theme-accent transition">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:ameenalalimi.dev@gmail.com" class="hover:text-theme-accent transition">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
 
 
 
