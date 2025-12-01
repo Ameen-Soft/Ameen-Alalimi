@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Tajawal';
+  font-family: "Tajawal";
   src: url(../assets/fonts/Tajawal-Regular.ttf);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Tajawal', sans-serif;
+  font-family: "Tajawal", sans-serif;
 }
 
 :root {
@@ -16,7 +20,7 @@ body {
   --color-dark-card: #17233f;
   --color-dark-text: #e5e5e5;
   --color-dark-accent: #6366f1;
-  --color-light-bg: #e6e6e6;
+  --color-light-bg: #f2f2f2;
   --color-light-card: #ffffff;
   --color-light-text: #333333;
   --color-light-accent: #443dc8;
@@ -81,4 +85,3 @@ body {
 .hover\:bg-theme-accent:hover {
   background-color: var(--accent-color);
 }
-

@@ -11,23 +11,23 @@
 </head>
 
 <body class="dark">
-  <header class="text-xl">
-    <nav class="navigation px-40 flex justify-between items-center h-12 bg-theme-card transition-colors duration-500">
+  <header class="text-xl fixed top-0 left-0 w-full z-50">
+    <nav
+      class="navigation px-40 flex justify-between items-center h-12 bg-theme-card transition-colors duration-500 shadow-md">
       <!-- شعار + أيقونة الوضع الليلي -->
       <div class="logo flex items-center space-x-16 text-theme-text ">
         <!-- الشعار -->
         <i id="darkToggle" class="fa fa-sun cursor-pointer hover:translate-y-1 duration-300 text-theme-accent"></i>
         <!-- لوجو -->
-        <a href="index.html"
-          class="bg-gradient-primary bg-clip-text text-transparent font-bold text-2xl">&lt;Ameen/&gt;</a>
+        <a href="#home" class="bg-gradient-primary bg-clip-text text-transparent font-bold text-2xl">&lt;Ameen/&gt;</a>
       </div>
 
       <!-- قائمة التنقل -->
       <div class="menu">
         <ul class="flex space-x-6 text-theme-text text-base">
-          <li><a href="services.html" class="hover:text-theme-accent duration-300">الخدمات</a></li>
-          <li><a href="skills.html" class="hover:text-theme-accent duration-300">المهارات</a></li>
-          <li><a href="projects.html" class="hover:text-theme-accent duration-300">مشاريعي</a></li>
+          <li><a href="#services" class="hover:text-theme-accent duration-300">الخدمات</a></li>
+          <li><a href="#skills" class="hover:text-theme-accent duration-300">المهارات</a></li>
+          <li><a href="#projects" class="hover:text-theme-accent duration-300">اعمال</a></li>
           <li><a href="contact.html"
               class="px-5 py-1.5 text-center bg-theme-card text-theme-accent border border-theme-accent rounded-md hover:bg-theme-accent hover:text-theme-accent-hover transition-all duration-300">تواصل</a>
           </li>
@@ -43,6 +43,268 @@
         class="px-5 py-1.5 text-center bg-theme-card text-theme-accent border border-theme-accent rounded-md hover:bg-theme-accent hover:text-theme-accent-hover transition-all duration-300">تواصل</a>
     </div> -->
   </header>
+
+  <section id="home" class="min-h-screen flex items-center justify-center pt-10 section-container p-20">
+    <div class="grid md:grid-cols-2 gap-12 items-center space-x-30">
+      <div class="space-y-6 fade-up delay-100">
+        <p class="bg-gradient-primary w-22 bg-clip-text text-transparent">مرحباً، اسمي</p>
+        <h1 class="text-5xl md:text-7xl font-black leading-tight textt-theme-text">
+          امين <span class="bg-gradient-primary bg-clip-text text-transparent">العليمي</span>
+        </h1>
+        <h2 class="text-3xl md:text-4xl font-bold text-theme-text">مطور مواقع</h2>
+        <p class="text-lg max-w-xl leading-relaxed">اعمل على تطوير واجهات الويب وحلول تقنية ذات جودة عالية</p>
+        <div class="flex gap-4 pt-4">
+          <a href="#projects"
+            class="px-8 py-4 rounded-lg bg-theme-card text-theme-accent font-bold hover:-translate-y-1 transition-all">
+            شاهد أعمالي
+          </a>
+          <a href="#contact"
+            class="px-8 py-4 rounded-lg font-bold border border-slate-700 hover:-translate-y-1 transition-all">
+            تواصل معي
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center fade-up delay-300 relative">
+        <div class="absolute -inset-4 bg-gradient-primary w-120 opacity-20 blur-3xl rounded-full z-0">
+        </div>
+        <!-- صورة الملف الشخصي -->
+        <img src="assets/images/profile.png" alt="صورة الملف الشخصي"
+          class="w-80 h-80 object-cover rounded-2xl border-4 border-slate-800 shadow-2xl rotate-3 grayscale-100 hover:grayscale-50 hover:rotate-0 transition-all duration-500 z-10 relative">
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-10 px-40 fade-up">
+    <h2
+      class="text-3xl font-bold text-theme-text mb-16 flex items-center after:content-[''] after:block after:w-32 after:h-[1px] after:bg-gray-700 after:mr-6">
+      <span class="text-theme-accent text-xl ml-2 font-mono">01.</span> خدماتي
+    </h2>
+
+    <!-- تطوير واجهات -->
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div
+        class="bg-theme-card p-8 rounded-lg border border-theme-card hover:border-theme-accent/50 hover:-translate-y-2 transition-all duration-300 group">
+        <div class="text-theme-accent mb-6">
+          <i class="fa-solid fa-laptop-code text-5xl group-hover:scale-110 transition-transform duration-300"></i>
+        </div>
+        <div class="info">
+          <h3 class="text-2xl font-bold text-theme-text mb-4 group-hover:text-theme-accent transition-colors">
+            تطوير واجهات المستخدم <br> (Front-End Development)
+          </h3>
+          <p class="text-theme-text/80 leading-relaxed">
+            أصمم واجهات مواقع حديثة سريعة ومتوافقة مع جميع الشاشات باستخدام HTML, CSS, JavaScript.
+          </p>
+        </div>
+      </div>
+
+      <!-- بناء مواقع -->
+
+      <div
+        class="bg-theme-card p-8 rounded-lg border border-theme-card hover:border-theme-accent/50 hover:-translate-y-2 transition-all duration-300 group">
+        <div class="text-theme-accent mb-6">
+          <i class="fa-solid fa-code text-5xl group-hover:scale-110 transition-transform duration-300"></i>
+        </div>
+        <div class="info">
+          <h3 class="text-2xl font-bold text-theme-text mb-4 group-hover:text-theme-accent transition-colors">
+            بناء مواقع ديناميكية متكاملة <br> (Full-Stack Web Development)
+          </h3>
+          <p class="text-theme-text/80 leading-relaxed">
+            أنشئ أنظمة ويب كاملة تربط الواجهة الأمامية بالخلفية مع قواعد بيانات قوية وتجربة مستخدم سلسة وحلول
+            جاهزة للاستخدام التجاري.
+          </p>
+        </div>
+      </div>
+
+      <!-- صيناة -->
+
+      <div
+        class="bg-theme-card p-8 rounded-lg border border-theme-card hover:border-theme-accent/50 hover:-translate-y-2 transition-all duration-300 group">
+        <div class="text-theme-accent mb-6">
+          <i class="fa-solid fa-tools text-5xl group-hover:scale-110 transition-transform duration-300"></i>
+        </div>
+        <div class="info">
+          <h3 class="text-2xl font-bold text-theme-text mb-4 group-hover:text-theme-accent transition-colors">
+            صيانة وتحديث المواقع <br> (Website Maintenance & Updates)
+          </h3>
+          <p class="text-theme-text/80 leading-relaxed">
+            أقدم صيانة دورية لموقعك تحديث المحتوى والبرمجيات وحل أي مشاكل تقنية بسرعة لضمان استمرارية عمل
+            الموقع بأعلى كفاءة وبدون توقف.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-20 px-40 fade-up">
+    <h2
+      class="text-3xl font-bold text-theme-text mb-16 flex items-center after:content-[''] after:block after:w-32 after:h-[1px] after:bg-gray-700 after:mr-6">
+      <span class="text-theme-accent text-xl ml-2">02.</span> مهاراتي التقنية
+    </h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
+
+      <!-- JavaScript -->
+      <div
+        class="p-6 rounded-xl bg-theme-card border border-slate-800 hover:border-theme-accent/50 hover:-translate-y-1 transition-all group">
+        <i
+          class="fa-brands fa-js text-5xl mx-auto mb-4 text-[#6366f1] group-hover:text-yellow-400 transition-colors"></i>
+        <h4 class="font-bold text-theme-text">JavaScript</h4>
+      </div>
+
+      <!-- React -->
+      <div
+        class="p-6 rounded-xl bg-theme-card border border-slate-800 hover:border-theme-accent/50 hover:-translate-y-1 transition-all group">
+        <i
+          class="fa-brands fa-react text-5xl mx-auto mb-4 text-[#6366f1] group-hover:text-[#61DAFB] transition-colors"></i>
+        <h4 class="font-bold text-theme-text">React</h4>
+      </div>
+
+      <!-- Tailwind -->
+      <div
+        class="p-6 rounded-xl bg-theme-card border border-slate-800 hover:border-theme-accent/50 hover:-translate-y-1 transition-all group">
+        <i
+          class="fa-solid fa-code text-5xl mx-auto mb-4 text-[#6366f1] group-hover:text-[#38B2AC] transition-colors"></i>
+        <h4 class="font-bold text-theme-text">Tailwind CSS</h4>
+      </div>
+
+      <!-- Node.js -->
+      <div
+        class="p-6 rounded-xl bg-theme-card border border-slate-800 hover:border-theme-accent/50 hover:-translate-y-1 transition-all group">
+        <i
+          class="fa-brands fa-node-js text-5xl mx-auto mb-4 text-[#6366f1] group-hover:text-[#8CC84B] transition-colors"></i>
+        <h4 class="font-bold text-theme-text">Node.js</h4>
+      </div>
+
+      <!-- MySQL -->
+      <div
+        class="p-6 rounded-xl bg-theme-card border border-slate-800 hover:border-theme-accent/50 hover:-translate-y-1 transition-all group">
+        <i
+          class="fa-solid fa-database text-5xl mx-auto mb-4 text-[#6366f1] group-hover:text-[#08668e] transition-colors"></i>
+        <h4 class="font-bold text-theme-text">MySQL</h4>
+      </div>
+
+      <!-- Git -->
+      <div
+        class="p-6 rounded-xl bg-theme-card border border-slate-800 hover:border-theme-accent/50 hover:-translate-y-1 transition-all group">
+        <i
+          class="fa-brands fa-git-alt text-5xl mx-auto mb-4 text-[#6366f1] group-hover:text-[#F05032] transition-colors"></i>
+        <h4 class="font-bold text-theme-text">Git</h4>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 px-40 fade-up">
+    <h2
+      class="text-3xl font-bold text-theme-text mb-12 flex items-center after:content-[''] after:block after:w-32 after:h-[1px] after:bg-gray-700 after:mr-6">
+      <span class="text-theme-accent text-xl ml-2 font-mono">03.</span> أعمال مميزة
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- مشروع 1 -->
+      <div
+        class="group rounded-2xl bg-theme-card border border-slate-800 overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-[#a256f6]/40">
+        <div class="relative overflow-hidden h-56">
+          <div
+            class="absolute inset-0 bg-primaryAccent/20 mix-blend-multiply z-10 transition-all group-hover:bg-transparent">
+          </div>
+          <img src="assets/images/project-image/project1.jpg" alt="صورة المشروع"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+        </div>
+        <div class="p-6 space-y-4">
+          <h3 class="text-2xl font-bold text-theme-text group-hover:text-primaryAccent transition-colors">منصة التجارة
+            الإلكترونية</h3>
+          <p class="text-slate-400 line-clamp-3">
+            منصة متكاملة للتجارة الإلكترونية مع لوحة تحكم للبائعين، نظام دفع إلكتروني، وتصميم متجاوب بالكامل.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-sm text-primaryAccent">
+            <span>React</span> <span>Node.js</span> <span>MongoDB</span>
+          </div>
+          <div class="flex gap-4 pt-2">
+            <a href="#" class="text-slate-300 hover:text-primaryAccent transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square hover:text-theme-accent transition"></i>
+            </a>
+            <a href="#" class="text-slate-300 hover:text-primaryAccent transition-colors">
+              <i class="fa-brands fa-github hover:text-theme-accent transition"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- مشروع 2 -->
+      <div
+        class="group rounded-2xl bg-theme-card border border-slate-800 overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-[#a256f6]/40">
+        <div class="relative overflow-hidden h-56">
+          <div
+            class="absolute inset-0 bg-primaryAccent/20 mix-blend-multiply z-10 transition-all group-hover:bg-transparent">
+          </div>
+          <img src="assets/images/project-image/project2.jpg" alt="صورة المشروع"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+        </div>
+        <div class="p-6 space-y-4">
+          <h3 class="text-2xl font-bold text-theme-text group-hover:text-primaryAccent transition-colors">تطبيق إدارة
+            المهام</h3>
+          <p class="text-slate-400 line-clamp-3">
+            تطبيق ويب لإدارة المهام اليومية مع ميزات السحب والإفلات والمزامنة الفورية بين الأجهزة.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-sm text-primaryAccent">
+            <span>Vue.js</span> <span>Firebase</span> <span>Tailwind</span>
+          </div>
+          <div class="flex gap-4 pt-2">
+            <a href="#" class="text-slate-300 hover:text-primaryAccent transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square hover:text-theme-accent transition"></i>
+            </a>
+            <a href="#" class="text-slate-300 hover:text-primaryAccent transition-colors">
+              <i class="fa-brands fa-github hover:text-theme-accent transition"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- مشروع 3 -->
+      <div
+        class="group rounded-2xl bg-theme-card border border-slate-800 overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-[#a256f6]/40">
+        <div class="relative overflow-hidden h-56">
+          <div
+            class="absolute inset-0 bg-primaryAccent/20 mix-blend-multiply z-10 transition-all group-hover:bg-transparent">
+          </div>
+          <img src="assets/images/project-image/project3.jpg" alt="صورة المشروع"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-500">
+        </div>
+        <div class="p-6 space-y-4">
+          <h3 class="text-2xl font-bold text-theme-text group-hover:text-primaryAccent transition-colors">موقع محفظة
+            رقمية</h3>
+          <p class="text-slate-400 line-clamp-3">
+            موقع لإدارة المحافظ الرقمية وإجراء التحويلات المالية بشكل آمن وسهل الاستخدام عبر الأجهزة المختلفة.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4 font-mono text-sm text-primaryAccent">
+            <span>Next.js</span> <span>TypeScript</span> <span>Tailwind</span>
+          </div>
+          <div class="flex gap-4 pt-2">
+            <a href="#" class="text-slate-300 hover:text-primaryAccent transition-colors">
+              <i class="fa-solid fa-arrow-up-right-from-square hover:text-theme-accent transition"></i>
+            </a>
+            <a href="#" class="text-slate-300 hover:text-primaryAccent transition-colors">
+              <i class="fa-brands fa-github hover:text-theme-accent transition"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- زر المزيد -->
+    <div class="text-center mt-12">
+      <a href="https://github.com/Ameen-soft" target="_blank"
+        class="inline-flex items-center gap-2 hover:text-theme-accent transition transition px-6 py-3 rounded-lg border border-slate-700 hover:border-[#443dc8] transition-all font-mono">
+        مشاهدة المزيد على GitHub <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+  </section>
+
+
+
 
   <script src="assets/js/app.js"></script>
 </body>
