@@ -29,3 +29,22 @@ const mobileMenu = document.getElementById("mobileMenu");
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
+
+emailjs.init("L2Nl9fouu8mSnjI34");
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_8h10y0a", "template_6niizr6", this).then(
+    () => {
+      alert("تم إرسال الرسالة بنجاح!");
+      contactForm.reset();
+    },
+    (error) => {
+      console.error("فشل الإرسال:", error);
+      alert("حدث خطأ أثناء إرسال الرسالة، حاول مرة أخرى.");
+    }
+  );
+});

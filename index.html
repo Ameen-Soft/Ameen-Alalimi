@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/css/output.css" rel="stylesheet">
+  <meta name="description" content="امـين العليمي - مطور مواقع ويب، مهتم بتطوير واجهات ومشاريع Full-Stack">
+  <meta name="keywords" content="HTML, CSS, JavaScript, React, Node.js, Tailwind, Flutter, MySQL">
   <link rel="stylesheet" href="assets/fontawesome-free-7.1.0-web/css/all.min.css">
   <link rel="stylesheet" href="assets/css/output.css">
   <title>امين العليمي | مطور مواقع</title>
@@ -326,30 +328,34 @@
     <div class="grid md:grid-cols-2 gap-12">
 
       <!-- نموذج التواصل -->
-      <form action="#" method="POST" class="space-y-6">
+      <!-- نموذج التواصل -->
+      <form id="contactForm" class="space-y-6">
         <div>
           <label for="name" class="block text-theme-text font-bold mb-2">الاسم</label>
-          <input type="text" id="name" name="name"
+          <input type="text" id="name" name="user_name" required
             class="w-full p-3 rounded-lg border border-slate-700 bg-theme-card text-theme-text focus:outline-none focus:border-theme-accent transition-all">
         </div>
 
         <div>
           <label for="email" class="block text-theme-text font-bold mb-2">البريد الإلكتروني</label>
-          <input type="email" id="email" name="email"
+          <input type="email" id="email" name="user_email" required
             class="w-full p-3 rounded-lg border border-slate-700 bg-theme-card text-theme-text focus:outline-none focus:border-theme-accent transition-all">
         </div>
 
         <div>
           <label for="message" class="block text-theme-text font-bold mb-2">الرسالة</label>
-          <textarea id="message" name="message" rows="6"
+          <textarea id="message" name="message" rows="6" required
             class="w-full p-3 rounded-lg border border-slate-700 bg-theme-card text-theme-text focus:outline-none focus:border-theme-accent transition-all"></textarea>
         </div>
 
         <button type="submit"
-          class="px-8 py-4 rounded-lg bg-theme-accent text-theme-card font-bold hover:-translate-y-1 transition-all">
+          class="px-8 py-4 rounded-lg bg-theme-card cursor-pointer hover:text-theme-accent text-theme-card font-bold hover:-translate-y-1 transition-all">
           أرسل الرسالة
         </button>
       </form>
+
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 
       <!-- معلومات الاتصال -->
       <div class="space-y-6 text-theme-text">
@@ -370,11 +376,11 @@
         <!-- روابط تواصل اجتماعي (اختياري) -->
         <div class="flex gap-6 mt-6">
           <a href="https://t.me/AmeenDev" target="_blank"
-            class="text-theme-accent text-2xl hover:text-primaryAccent transition">
+            class="text-theme-accent text-2xl hover:text-[#1187c2]! transition duration-300">
             <i class="fa-brands fa-telegram"></i>
           </a>
           <a href="https://wa.me/967777235077" target="_blank"
-            class="text-theme-accent text-2xl hover:text-green-500 transition">
+            class="text-theme-accent text-2xl hover:text-green-500! transition duration-300">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>
@@ -392,16 +398,16 @@
 
       <!-- روابط تواصل اجتماعي -->
       <div class="flex gap-6 text-2xl">
-        <a href="https://t.me/AmeenDev" target="_blank" class="hover:text-primaryAccent transition">
+        <a href="https://t.me/AmeenDev" target="_blank" class="hover:text-[#1187c2]! transition duration-300">
           <i class="fa-brands fa-telegram"></i>
         </a>
-        <a href="https://wa.me/967777235077" target="_blank" class="hover:text-green-500 transition">
+        <a href="https://wa.me/967777235077" target="_blank" class="hover:text-green-500 transition duration-300">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="https://github.com/Ameen-soft" target="_blank" class="hover:text-theme-accent transition">
+        <a href="https://github.com/Ameen-soft" target="_blank" class="hover:text-black transition duration-300">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="mailto:ameenalalimi.dev@gmail.com" class="hover:text-theme-accent transition">
+        <a href="mailto:ameenalalimi.dev@gmail.com" class="hover:text-[#c3221f] transition duration-300">
           <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
