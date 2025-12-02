@@ -5,7 +5,7 @@
   src: url(../assets/fonts/Tajawal-Regular.ttf);
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -84,4 +84,24 @@ body {
 
 .hover\:bg-theme-accent:hover {
   background-color: var(--accent-color);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: var(--color-primary-400);
+  margin-left: 2px;
+  border-radius: 1px;
+  animation: blink 0.75s step-start infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
